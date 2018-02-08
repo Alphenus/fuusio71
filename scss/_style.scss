@@ -20,6 +20,7 @@ body {
     }
 }
 
+
 .fixed {
     position: fixed; /* Set the navbar to fixed position */
     top: 0;
@@ -29,7 +30,7 @@ body {
     padding-top: 15px;
     background-color: black;
     width: 100%;
-    height: 50px;
+    min-height: 50px;
 }
 
 .diacontainer {
@@ -51,4 +52,20 @@ body {
 
 #content {
     padding-top: 25px;
+}
+
+h5 {
+    font-style: normal;
+}
+
+tr {
+    td {
+        @include breakpoint(small) {
+            padding: 0px !important;
+        }
+
+        &:first-child {
+            font-weight: bold;
+        }
+    }
 }
